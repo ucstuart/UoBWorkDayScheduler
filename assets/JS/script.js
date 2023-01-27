@@ -1,16 +1,16 @@
 // Environment Variables
 
-var environment = "T"; // Sets environment to Testing or Production
-var forceHour = 9; // for testing forces the time to what is contained in the variable
+    var environment = "T"; // Sets environment to Testing or Production
+    var forceHour = 13; // for testing forces the time to what is contained in the variable
 
 // Set Environment Test / Production Variables. 
 
-if (environment ==="T") {
-    var currentHour = forceHour;
-    console.log("Current Hour: "+currentHour);
-} else {
-    var currentHour = moment().format('H'); // Get the Current Hour
-}
+    if (environment ==="T") {
+        var currentHour = forceHour;
+        console.log("Current Hour: "+currentHour);
+    } else {
+        var currentHour = moment().format('H'); // Get the Current Hour
+    }
 
 
 // Add the Current Time and Date to the Page.
@@ -47,7 +47,7 @@ if (environment ==="T") {
     switch (currentHour) {
         case 9:
             if (environment="T") {console.log("9am")};            
-            textarea9El.attr ('class','col-md-10 textarea present');
+            textarea9El.attr ('class','col-md-10 textarea present'); 
             textarea10El.attr ('class','col-md-10 textarea future');
             textarea11El.attr ('class','col-md-10 textarea future');
             textarea12El.attr ('class','col-md-10 textarea future');
@@ -168,4 +168,44 @@ if (environment ==="T") {
     }
 
 //
+
+
+// Access the Text for each Time Slot
+
+    var text9El =  $('#t9');  // Access 9  am
+    var text10El = $('#t10'); // Access 10 am
+    var text11El = $('#t11'); // Access 11 am
+    var text12El = $('#t12'); // Access 12 am
+    var text13El = $('#t13'); // Access 1  pm
+    var text14El = $('#t14'); // Access 2  pm
+    var text15El = $('#t15'); // Access 3  pm
+    var text16El = $('#t16'); // Access 4  pm
+    var text17El = $('#t17'); // Access 5  pm
+
+
+// Get stored text from local storage and display
+
+text9El.text(localStorage.getItem("9am Text"));
+text10El.text(localStorage.getItem("10am Text"));
+text11El.text(localStorage.getItem("11am Text"));
+text12El.text(localStorage.getItem("12am Text"));
+text13El.text(localStorage.getItem("1pm Text"));
+text14El.text(localStorage.getItem("2pm Text"));
+text15El.text(localStorage.getItem("3pm Text"));
+text16El.text(localStorage.getItem("4pm Text"));
+text17El.text(localStorage.getItem("5pm Text"));
+
+// Function to Rest Local Storage 
+
+function resetLocalStorage() {
+    localStorage.setItem("9am Text", "");
+    localStorage.setItem("10am Text", "");
+    localStorage.setItem("11am Text", "");
+    localStorage.setItem("12am Text", "");
+    localStorage.setItem("1pm Text", "");
+    localStorage.setItem("2pm Text", "");
+    localStorage.setItem("3pm Text", "");
+    localStorage.setItem("4pm Text", "");
+    localStorage.setItem("5pm Text", "");
+}
 
