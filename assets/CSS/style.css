@@ -70,3 +70,19 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+/* Added Reset Button CSS Code */
+
+.resetBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #d50606;
+  color: white;
+  margin: 20px 20px 20px 20px;
+}
+
+.resetBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}

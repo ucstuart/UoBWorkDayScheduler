@@ -182,6 +182,7 @@
     var text16El = $('#t16'); // Access 4  pm
     var text17El = $('#t17'); // Access 5  pm
 
+localStorage.setItem("9am Text", "Text");
 
 // Get stored text from local storage and display
 
@@ -195,9 +196,14 @@ text15El.text(localStorage.getItem("3pm Text"));
 text16El.text(localStorage.getItem("4pm Text"));
 text17El.text(localStorage.getItem("5pm Text"));
 
-// Function to Rest Local Storage 
 
-function resetLocalStorage() {
+// Adding Reset Functionality
+
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    // Set the Data to be BLANK
     localStorage.setItem("9am Text", "");
     localStorage.setItem("10am Text", "");
     localStorage.setItem("11am Text", "");
@@ -207,5 +213,15 @@ function resetLocalStorage() {
     localStorage.setItem("3pm Text", "");
     localStorage.setItem("4pm Text", "");
     localStorage.setItem("5pm Text", "");
-}
+    // Get the Data Back
+    text9El.text(localStorage.getItem("9am Text"));
+    text10El.text(localStorage.getItem("10am Text"));
+    text11El.text(localStorage.getItem("11am Text"));
+    text12El.text(localStorage.getItem("12am Text"));
+    text13El.text(localStorage.getItem("1pm Text"));
+    text14El.text(localStorage.getItem("2pm Text"));
+    text15El.text(localStorage.getItem("3pm Text"));
+    text16El.text(localStorage.getItem("4pm Text"));
+    text17El.text(localStorage.getItem("5pm Text"));
+})
 
