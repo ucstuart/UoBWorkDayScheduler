@@ -1,7 +1,7 @@
 // Environment Variables
 
-var environment = "P"; // Sets environment to Testing or Production
-var forceHour = 17; // for testing forces the time to what is contained in the variable
+var environment = "T"; // Sets environment to Testing or Production
+var forceHour = 9; // for testing forces the time to what is contained in the variable
 
 // Set Environment Test / Production Variables. 
 
@@ -46,7 +46,7 @@ if (environment ==="T") {
 
     switch (currentHour) {
         case 9:
-            console.log("9am");
+            if (environment="T") {console.log("9am")};            
             textarea9El.attr ('class','col-md-10 textarea present');
             textarea10El.attr ('class','col-md-10 textarea future');
             textarea11El.attr ('class','col-md-10 textarea future');
@@ -58,7 +58,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 10:
-            console.log("10am");
+            if (environment="T") {console.log("10am")};  
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea present');
             textarea11El.attr ('class','col-md-10 textarea future');
@@ -70,7 +70,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 11:
-            console.log("11am");
+            if (environment="T") {console.log("11am")};  
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea present');
@@ -82,7 +82,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 12:
-            console.log("12am");
+            if (environment="T") {console.log("12am")};  
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -94,7 +94,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 13:
-            console.log("1pm");
+            if (environment="T") {console.log("1pm")};  
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -106,7 +106,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 14:
-            console.log("2pm");
+            if (environment="T") {console.log("2pm")}; 
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -118,7 +118,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 15:
-            console.log("3pm");
+            if (environment="T") {console.log("3pm")}; 
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -130,7 +130,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 16:
-            console.log("4pm");
+            if (environment="T") {console.log("4pm")}; 
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -142,7 +142,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea future');
             break;
         case 17:
-            console.log("5pm");
+            if (environment="T") {console.log("5pm")}; 
             textarea9El.attr ('class','col-md-10 textarea past');
             textarea10El.attr ('class','col-md-10 textarea past');
             textarea11El.attr ('class','col-md-10 textarea past');
@@ -154,7 +154,7 @@ if (environment ==="T") {
             textarea17El.attr ('class','col-md-10 textarea present');
             break;
         default:
-            console.log("Not Between 9am - 5pm e.g. NEXT DAY");
+            if (environment="T") {console.log("Not Between 9am - 5pm e.g. NEXT DAY")}; 
             textarea9El.attr ('class','col-md-10 textarea future');
             textarea10El.attr ('class','col-md-10 textarea future');
             textarea11El.attr ('class','col-md-10 textarea future');
