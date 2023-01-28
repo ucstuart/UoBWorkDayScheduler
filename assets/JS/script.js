@@ -225,3 +225,26 @@ resetButton.addEventListener("click", function(event) {
     text17El.text(localStorage.getItem("5pm Text"));
 })
 
+// Adding Save Functionality for Text
+
+// Access the Save Buttons for each Time Slot
+
+var save9El =  document.querySelector('#save9');  // Access 9  am
+var save10El = document.querySelector('#save10'); // Access 10 am
+var save11El = document.querySelector('#save11'); // Access 11 am
+var save12El = document.querySelector('#save12'); // Access 12 am
+var save13El = document.querySelector('#save13'); // Access 1  pm
+var save14El = document.querySelector('#save14'); // Access 2  pm
+var save15El = document.querySelector('#save15'); // Access 3  pm
+var save16El = document.querySelector('#save16'); // Access 4  pm
+var save17El = document.querySelector('#save17'); // Access 5  pm
+
+save9El.addEventListener("click", function(event) {
+    event.preventDefault();
+    store9 = text9El.text();
+    console.log(store9);
+    localStorage.setItem("9am Text",store9);
+})
+
+
+
