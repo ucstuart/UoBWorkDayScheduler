@@ -12,9 +12,9 @@
         var currentHour = moment().format('H'); // Get the Current Hour
     }
 
-// Clear the localStorage to Start
+// Clear the localStorage to Start - USE IF NEEDED WHEN TESTING
 
-localStorage.clear();
+// localStorage.clear();
 
 
 // Add the Current Time and Date to the Page.
