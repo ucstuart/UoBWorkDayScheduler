@@ -1,6 +1,6 @@
 // Environment Variables
 
-    var environment = "T"; // Sets environment to Testing or Production
+    var environment = "P"; // Sets environment to Testing or Production
     var forceHour = 11; // for testing forces the time to what is contained in the variable
 
 // Set Environment Test / Production Variables. 
