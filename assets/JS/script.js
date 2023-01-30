@@ -1,7 +1,7 @@
 // Environment Variables
 
-    var environment = "P"; // Sets environment to Testing or Production
-    var forceHour = 13; // for testing forces the time to what is contained in the variable
+    var environment = "T"; // Sets environment to Testing or Production
+    var forceHour = 11; // for testing forces the time to what is contained in the variable
 
 // Set Environment Test / Production Variables. 
 
@@ -10,6 +10,7 @@
         console.log("Current Hour: "+currentHour);
     } else {
         var currentHour = moment().format('H'); // Get the Current Hour
+        console.log("Current Hour: "+currentHour);
     }
 
 // Clear the localStorage to Start - USE IF NEEDED WHEN TESTING
